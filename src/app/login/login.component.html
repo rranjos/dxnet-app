@@ -1,0 +1,34 @@
+<div class="container">
+    <mat-card class="card" *ngIf="login">
+        <mat-card-header>
+            <mat-card-title>User Login</mat-card-title>
+          </mat-card-header>
+        <mat-card-content >
+            <div class="file-upload">
+                <div>
+                    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>          
+                </div>
+                <div class="btAnexar">
+                    <button mat-mini-fab color="primary"  class="upload-btn" (click)="performUpload()">
+                        <mat-icon>attach_file</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="isSend">
+                Image succefull uploaded!
+            </div>
+            <div *ngIf="error">
+                Imagem not found!!
+            </div>
+        </mat-card-content>
+    </mat-card>
+<div></div>
+    <mat-card class="card" *ngIf="sayHello">
+        <mat-card-content >
+           <h1>Hello!!</h1> 
+           <a routerLink="/">Back to home</a>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+

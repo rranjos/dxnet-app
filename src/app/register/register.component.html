@@ -1,0 +1,24 @@
+<div class="container">
+    <mat-card class="card">
+        <mat-card-header>
+            <mat-card-title>Register User</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+
+            <div class="file-upload">
+                <div>
+                    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+                </div>
+                <div class="btAnexar">
+                    <button mat-mini-fab color="primary" class="upload-btn" (click)="performUpload()">
+                        <mat-icon>attach_file</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="isSend">
+                Image succefull uploaded!
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
